@@ -6,7 +6,7 @@ import indexRouter from "./routes/index.js";
 import argonautesRouter from "./routes/argonautes.js"
 
 
-const PORT = 4001;
+const PORT = process.env.PORT || 4001;
 
 const app = express();
 app.use(cors());
