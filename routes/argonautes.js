@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import { readAll } from "../controllers/controller.js";
+import { insert, readAll } from "../controllers/controller.js";
 
 //TODO : local test data
 /*
@@ -13,8 +13,12 @@ const argonautesList = [
 
 router.get("/", async (req, res, next) => {
     const data = await readAll(req, res, next);
-    console.log(data);
-    res.json(data.rows);
+    return res.json(data.rows);
+});
+
+router.post("/", async (req, res, next) => {
+    const data = await insert(req, res, next);
+    return res.json(data.rows);
 });
 
 export default router;
