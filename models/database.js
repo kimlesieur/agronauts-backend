@@ -27,4 +27,10 @@ const pool = new Pool({
   ssl: ssl,
 })
 
+if(pool){
+  console.log("Connection ok")
+} else {
+  console.log("Error with connection")
+}
+
 export default pool;
