@@ -12,12 +12,13 @@ const argonautesList = [
 */
 
 router.get("/", async (req, res, next) => {
-    const data = await readAll(req, res, next);
+    const data = await readAll();
     return res.json(data.rows);
 });
 
 router.post("/", async (req, res, next) => {
-    const data = await insert(req, res, next);
+    const {name} = req.body;
+    const data = await insert(name, res);
     return res.json(data.rows);
 });
 
