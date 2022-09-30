@@ -5,7 +5,7 @@ dotenv.config();
 
 export const readAll = async (res) => {
     try {
-        const data = await pool.query(`SELECT * FROM ${process.env.DATABASE_TABLE}`);
+        const data = await pool.query(`SELECT * FROM ${process.env.DATABASE_TABLE};`);
         return data;
     } catch (err) {
         return res.status(400).json({
@@ -17,7 +17,7 @@ export const readAll = async (res) => {
 export const insert = async (name, res) => {
 
     try {
-        const data = await pool.query(`INSERT INTO ${process.env.DATABASE_TABLE} (name) VALUES ('${name}') RETURNING *`);
+        const data = await pool.query(`INSERT INTO ${process.env.DATABASE_TABLE}(name) VALUES ('${name}') RETURNING *;`);
         return data;
     } catch (err) {
         return res.status(400).json({

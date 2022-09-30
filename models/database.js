@@ -6,8 +6,8 @@ dotenv.config();
 
 const isProduction = process.env.PRODUCTION === 'true';
 
-const createConnection = (boolean) => {
-  if(boolean){
+const createConnection = (test) => {
+  if(test){
     const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`;
     const ssl = { rejectUnauthorized: false };
     return {connectionString, ssl};
@@ -26,11 +26,5 @@ const pool = new Pool({
   connectionString: connectionString,
   ssl: ssl,
 })
-
-if(pool){
-  console.log("Connection ok")
-} else {
-  console.log("Error with connection")
-}
 
 export default pool;
