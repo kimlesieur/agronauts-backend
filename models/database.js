@@ -19,8 +19,6 @@ const createConnection = (test) => {
 }
 
 const {connectionString, ssl} = createConnection(isProduction);
-console.log(connectionString);
-console.log(ssl);
 
 const pool = new Pool({
   connectionString: connectionString,
