@@ -6,10 +6,10 @@ You can find the associated frontend API on this repo :  [Argonauts Frontend](ht
 
 ## How to run this project ? 
 
-To run the project, clone this repo and the [frontend API](https://github.com/kimlesieur/argonauts-frontend).
-    1. Install depedencies with `npm i`
-    2. Run both the backend and the frontend with `npm start`. 
-    3. Don't forget to customize your environment variables in the .env files !
+To run the project, clone this repo and the [frontend API](https://github.com/kimlesieur/argonauts-frontend).  
+    1. Install depedencies with `npm i`  
+    2. Run both the backend and the frontend with `npm start`.  
+    3. Don't forget to customize your environment variables in the .env files !  
 
 ## Dependencies
 
