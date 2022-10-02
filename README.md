@@ -4,6 +4,8 @@ This project is a backend API made with Node.js/Express to perform CRUD operatio
 
 You can find the associated frontend API on this repo :  [Argonauts Frontend](https://github.com/kimlesieur/argonauts-frontend)
 
+Online version available on Heroku : [https://jason-argonauts-front.herokuapp.com/](https://jason-argonauts-front.herokuapp.com/)
+
 ## How to run this project ? 
 
 To run the project, clone this repo and the [frontend API](https://github.com/kimlesieur/argonauts-frontend).  
